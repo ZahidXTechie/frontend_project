@@ -7,14 +7,24 @@
 }
 html,body{
     width: 100%;
-    height: 100%;;
+    
 }
 body {
     background-color: black;
 }
+#minicircle{
+    transition:cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 999;
+    border-radius: 50%;
+    background-color:#fff;
 
+}
 #main{
     width:100%;
+    height: 100%;
     background-color: black;
 }
 #hero{
@@ -23,6 +33,16 @@ body {
     height: 100vh;
     background-color: black;
 
+}
+.bounding{
+    width: fit-content;
+    
+    overflow: hidden;
+    
+}
+.bounding .boundingelem{
+    transform: translateY(100%);
+   
 }
 #ugwu{
     display: flex;
@@ -68,7 +88,12 @@ body {
     
 }
 .blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: fit-content;
+    
+    
     
 }
 .blocktext h5{
@@ -78,8 +103,10 @@ body {
     text-transform: uppercase;
     text-align: right;
 }
-#work{
-
+#work{  
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 160px;
     text-transform: uppercase;
    
@@ -97,11 +124,12 @@ body {
 
 }
 #pagefooter{
-   
+   padding: 0 2vw;
    width: 100%;
    bottom:3%;
     position: absolute;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     text-decoration: none;
     text-transform: uppercase;
@@ -111,10 +139,11 @@ body {
     text-decoration: none;
     font-size: 15px;
     font-weight: 700;
-    margin-left: 30px;
+    
 }
 #iconset{
     display: flex;
+    gap: 5px;
  
 }
 .circle{
@@ -126,7 +155,7 @@ body {
     height: 25px;
     border-radius: 50%;
     background-color: #888;
-    margin: 3px;
+   
 }
 #second{
      width: 100%;
@@ -153,7 +182,7 @@ body {
     font-size: 5vw;
     opacity:0.7;
 }
-#lastelem{
+.elemlast{
     border-bottom: 1px solid #888;
     
 }
@@ -161,7 +190,9 @@ body {
     height: 140%;
     position: absolute;
     z-index:999 ;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%,-50%);
 }
 #about{
     display: flex;
@@ -213,9 +244,9 @@ body {
     text-transform: uppercase;
     opacity: .6;
 }
-#subscrube h3{
+#subscribe h3{
     text-transform: uppercase;
-    font-size: 140px;
+    
     margin-top:10px
 }
 #footer{
